@@ -1,3 +1,20 @@
+# Travel Booking Platform 🌎✈️
+
+This repository hosts the code for a full-featured travel booking platform, aimed at delivering a seamless experience for users to browse, book, and manage travel plans. The project includes a frontend website for user interaction and a backend booking engine that handles data storage, reservation management, and payment processing.
+
+## Features
+- **User-Friendly Frontend:** An intuitive and responsive website where users can explore travel options, view details, and make bookings.
+- **Robust Booking Engine:** Backend system built to manage booking logistics, availability, user profiles, and payments securely and efficiently.
+- **Payment Integration:** Supports popular payment gateways, ensuring safe and smooth transactions.
+- **Real-Time Availability Checks:** Ensures up-to-date information on available travel options.
+- **Notifications:** Alerts users on booking confirmations, cancellations, and reminders.
+
+## Tech Stack
+- **Frontend:** HTML, CSS, JavaScript, React
+- **Backend:** Node.js, Express
+- **Database:** MongoDB / MySQL
+- **Payment Gateway:** PayPal
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
