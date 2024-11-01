@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.contact-box{
+  transition: 0.5s;
+  width: 250px;
+
+}
+
+.contact-box:hover{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(239,68,68,1) 0%, rgba(255,80,0,0.11545868347338939) 100%);
+  transform: translateY(-10px)
+}

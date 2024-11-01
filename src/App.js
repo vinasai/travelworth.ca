@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import './assets/css/tailwind.css'
 import './assets/css/materialdesignicons.min.css'
+import './App.css'
 
 import Index from './pages/index/index'
 import IndexTwo from './pages/index/index-two'
