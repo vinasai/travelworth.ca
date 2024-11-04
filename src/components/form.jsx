@@ -11,17 +11,9 @@ export default function Form() {
 
     return (
         <div className="grid grid-cols-1">
-            <form className="contact-box p-4 bg-white allign:items-center dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-700">
-                <div className="registration-form text-dark text-center">
-                    <div className="grid grid-cols-1 gap-4">
-                        <div className="flex flex-col items-center my-4">
-                            <h2 className="text-xl font-semibold text-slate-900 dark:text-white m-2">Contact Us</h2>
-                            <div className="flex items-center justify-center space-x-2">
-                                <FiPhone className="text-red-500" size={30} />
-                                <span className="text-red-500 text-lg  font-bold">1. 416 .754 .3833</span>
-                            </div>
-                        </div>
-
+            {/*<form className="contact-box p-4 bg-white allign:items-center dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-700">*/}
+                {/*<div className="registration-form text-dark text-center">*/}
+                    {/*<div className="grid grid-cols-1 gap-4">*/}
                         {/* <div>
                             <label className="form-label font-medium text-slate-900 dark:text-white">Select Your Date:</label>
                             <div className="relative mt-2">
@@ -56,9 +48,9 @@ export default function Form() {
                         {/* <div className="lg:mt-[35px]">
                             <input type="submit" id="search-buy" name="search" className="py-1 px-5 h-10 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full cursor-pointer" defaultValue="Search"/>
                         </div> */}
-                    </div>
-                </div>
-            </form>
+                    {/*</div>*/}
+                {/*</div>*/}
+            {/*</form>*/}
         </div>
     );
 }

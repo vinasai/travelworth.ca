@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import './assets/css/tailwind.css'
 import './assets/css/materialdesignicons.min.css'
 import './App.css'
@@ -9,7 +9,7 @@ import IndexTwo from './pages/index/index-two'
 import IndexThree from './pages/index/index-three'
 import IndexFour from './pages/index/index-four'
 import IndexFive from './pages/index/index-five'
-import Grid from './pages/listing/tour-grid/grid' 
+import Grid from './pages/listing/tour-grid/grid'
 import GridLeftSidebar from './pages/listing/tour-grid/grid-left-sidebar'
 import GridRightSidebar from './pages/listing/tour-grid/grid-right-sidebar'
 import List from './pages/listing/tour-list/list'
@@ -44,50 +44,51 @@ import BlogDetail from './pages/blog/blog-detail'
 import Contact from './pages/contact'
 
 function App() {
-  return (
-   <Routes>
-    <Route path="/" element={<Index/>}/>
-    <Route path="/index-two" element={<IndexTwo/>}/>
-    <Route path="/index-three" element={<IndexThree/>}/>
-    <Route path="/index-four" element={<IndexFour/>}/>
-    <Route path="/index-five" element={<IndexFive/>}/>
-    <Route path="/grid" element={<Grid/>}/>
-    <Route path="/grid-left-sidebar" element={<GridLeftSidebar/>}/>
-    <Route path="/grid-right-sidebar" element={<GridRightSidebar/>}/>
-    <Route path="/list" element={<List/>}/>
-    <Route path="/list-left-sidebar" element={<ListLeftSidebar/>}/>
-    <Route path="/list-right-sidebar" element={<ListRightSidebar/>}/>
-    <Route path="/tour-detail-one" element={<TourDetailOne/>}/>
-    <Route path="/tour-detail-one/:id" element={<TourDetailOne/>}/>
-    <Route path="/tour-detail-two" element={<TourDetailTwo/>}/>
-    <Route path="/aboutus" element={<Aboutus/>}/>
-    <Route path="/user-profile" element={<UserProfile/>}/>
-    <Route path="/user-payment" element={<UserPayment/>}/>
-    <Route path="/user-invoice" element={<UserInvoice/>}/>
-    <Route path="/user-social" element={<UserSocial/>}/>
-    <Route path="/user-notification" element={<UserNotification/>}/>
-    <Route path="/user-setting" element={<UserSetting/>}/>
-    <Route path="/helpcenter" element={<Helpcenter/>}/>
-    <Route path="/helpcenter-faqs" element={<HelpcenterFaq/>}/>
-    <Route path="/helpcenter-guides" element={<HelpcenterGuides/>}/>
-    <Route path="/helpcenter-support" element={<HelpcenterSupport/>}/>
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/signup" element={<Signup/>}/>
-    <Route path="/signup-success" element={<SignupSuccess/>}/>
-    <Route path="/forgot-password" element={<ForgotPassword/>}/>
-    <Route path="/lock-screen" element={<LockScreen/>}/>
-    <Route path="/terms" element={<Terms/>}/>
-    <Route path="/privacy" element={<Privacy/>}/>
-    <Route path="/comingsoon" element={<Comingsoon/>}/>
-    <Route path="/maintenance" element={<Maintenance/>}/>
-    <Route path="/404" element={<Error/>}/>
-    <Route path="/blogs" element={<Blogs/>}/>
-    <Route path="/blog-standard" element={<BlogStandard/>}/>
-    <Route path="/blog-detail" element={<BlogDetail/>}/>
-    <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
-    <Route path="/contact" element={<Contact/>}/>
-   </Routes>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Index/>}/>
+            <Route path="/index-two" element={<IndexTwo/>}/>
+            <Route path="/index-three" element={<IndexThree/>}/>
+            <Route path="/index-four" element={<IndexFour/>}/>
+            <Route path="/index-five" element={<IndexFive/>}/>
+            <Route path="/grid" element={<Grid/>}/>
+            <Route path="/grid-left-sidebar" element={<GridLeftSidebar/>}/>
+            <Route path="/grid-right-sidebar" element={<GridRightSidebar/>}/>
+            <Route path="/list" element={<List/>}/>
+            <Route path="/list-left-sidebar" element={<ListLeftSidebar/>}/>
+            <Route path="/list-right-sidebar" element={<ListRightSidebar/>}/>
+            <Route path="/tour-detail-one" element={<TourDetailOne/>}/>
+            <Route path="/tour-detail-one/:id" element={<TourDetailOne/>}/>
+            <Route path="/tour-detail-two" element={<TourDetailTwo/>}/>
+            <Route path="/aboutus" element={<Aboutus/>}/>
+            <Route path="/user-profile" element={<UserProfile/>}/>
+            <Route path="/user-payment" element={<UserPayment/>}/>
+            <Route path="/user-invoice" element={<UserInvoice/>}/>
+            <Route path="/user-social" element={<UserSocial/>}/>
+            <Route path="/user-notification" element={<UserNotification/>}/>
+            <Route path="/user-setting" element={<UserSetting/>}/>
+            <Route path="/helpcenter" element={<Helpcenter/>}/>
+            <Route path="/helpcenter-faqs" element={<HelpcenterFaq/>}/>
+            <Route path="/helpcenter-guides" element={<HelpcenterGuides/>}/>
+            <Route path="/helpcenter-support" element={<HelpcenterSupport/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<Signup/>}/>
+            <Route path="/signup-success" element={<SignupSuccess/>}/>
+            <Route path="/forgot-password" element={<ForgotPassword/>}/>
+            <Route path="/lock-screen" element={<LockScreen/>}/>
+            <Route path="/terms" element={<Terms/>}/>
+            <Route path="/privacy" element={<Privacy/>}/>
+            <Route path="/comingsoon" element={<Comingsoon/>}/>
+            <Route path="/maintenance" element={<Maintenance/>}/>
+            <Route path="/404" element={<Error/>}/>
+            <Route path="/blogs" element={<Blogs/>}/>
+            <Route path="/blog-standard" element={<BlogStandard/>}/>
+            <Route path="/blog-detail" element={<BlogDetail/>}/>
+            <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="*" element={<h1 className={"text-center "}>404 Not Found</h1>}/>
+        </Routes>
+    );
 }
 
 export default App;
