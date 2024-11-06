@@ -8,28 +8,35 @@ import Footer from "../components/footer";
 import Switcher from "../components/switcher";
 
 import {FiPhone, FiMail,FiMapPin, FiX} from '../assets/icons/vander'
+import {data} from "autoprefixer";
 
 export default function Contact(){
     let [modal, setModal] = useState(false)
     const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    // let objr = {
+    //     subject: "Meeting Reminder",
+    //     comments: "Don't forget about the team meeting at 10 AM.",
+    //     email: "example@domain.com",
+    //     to_email:"vksthanujaa@gmail.com"
+    // }
 
-        emailjs
-            .sendForm('service_yjqd7ld', 'template_85id8vm', form.current, {
-                publicKey: 'C8tJmFXwoPnPN0xwe',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    console.log('Your message has been sent successfully. We will contact you very soon!');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
-    };
+    function sendEmail(e){
+        e.preventDefault();
+        const formData = {
+            name: form.current.name.value,
+            email: form.current.email.value,
+            subject: form.current.subject.value,
+            comments: form.current.comments.value,
+            to_email: "vinasaionline@gmail.com"
+        };
+        emailjs.send('service_yjqd7ld', 'template_85id8vm', formData,{publicKey: 'KgIi7Ml2if6NxTllR'})
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    }
 
     return(
         <>
@@ -57,32 +64,43 @@ export default function Contact(){
                                     <div className="grid lg:grid-cols-12 grid-cols-1 gap-3">
                                         <div className="lg:col-span-6">
                                             <label htmlFor="name" className="font-semibold">Your Name:</label>
-                                            <input name="name" id="name" type="text" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Name :" required/>
+                                            <input name="name" id="name" type="text"
+                                                   className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                                                   placeholder="Name :" required/>
                                         </div>
-        
+
                                         <div className="lg:col-span-6">
                                             <label htmlFor="email" className="font-semibold">Your Email:</label>
-                                            <input name="email" id="email" type="email" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Email :" required/>
+                                            <input name="email" id="email" type="email"
+                                                   className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                                                   placeholder="Email :" required/>
                                         </div>
 
                                         <div className="lg:col-span-12">
                                             <label htmlFor="subject" className="font-semibold">Your Question:</label>
-                                            <input name="subject" id="subject" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Subject :" required/>
+                                            <input name="subject" id="subject"
+                                                   className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                                                   placeholder="Subject :" required/>
                                         </div>
-    
+
                                         <div className="lg:col-span-12">
                                             <label htmlFor="comments" className="font-semibold">Your Comment:</label>
-                                            <textarea name="comments" id="comments" className="mt-2 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Message :"></textarea>
+                                            <textarea name="comments" id="comments"
+                                                      className="mt-2 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                                                      placeholder="Message :"></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" id="submit" name="send" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md mt-2">Send Message</button>
+                                    <button type="submit" id="submit" name="send"
+                                            className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md mt-2">Send
+                                        Message
+                                    </button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div className="container lg:mt-24 mt-16">
                 <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
                     <div className="text-center px-6">
