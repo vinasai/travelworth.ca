@@ -1,26 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Tagline from '../../components/tagline';
-import Navbar from '../../components/navbar';
-import Form from '../../components/form';
-import TopDestinationOne from '../../components/top-destination-one';
-import About from '../../components/about';
-import Client from '../../components/client';
-import Blogs from '../../components/blogs';
-import Footer from '../../components/footer';
-import Switcher from '../../components/switcher';
+import Tagline from '../../src/components/tagline';
+import Navbar from '../../src/components/navbar';
+import TopDestinationOne from '../../src/components/top-destination-one';
+import Footer from '../../src/components/footer';
+import Switcher from '../../src/components/switcher';
 
-import ModalVideo from 'react-modal-video';
-import '../../../node_modules/react-modal-video/scss/modal-video.scss';
+import '../../node_modules/react-modal-video/scss/modal-video.scss';
 
-import { packages } from '../../data/data';
+import { packages } from '../data/data';
 
-import { FiMapPin } from '../../assets/icons/vander';
+import { FiMapPin } from '../assets/icons/vander';
 
-export default function Index() {
-    const [isOpen, setOpen] = useState(false);
+import DestinationsByRegion from '../components/destinations/destination-by-region';
 
+export default function ExploreDestinations() {
     return (
         <>
             <Tagline />
@@ -29,47 +24,33 @@ export default function Index() {
                 navlight={true}
                 manuclass="justify-end nav-light"
             />
-            <section className="relative md:pt-72 md:pb-60 py-36 table w-full items-center bg-[url('../../assets/images/bg/1.jpg')] bg-top bg-no-repeat bg-cover">
+            <section className="relative md:pt-72 md:pb-60 py-36 table w-full items-center bg-[url('https://images.pexels.com/photos/3669288/pexels-photo-3669288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-top bg-no-repeat bg-cover">
                 <div className="absolute inset-0 bg-slate-900/40"></div>
                 <div className="container relative">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
                         <div className="lg:col-span-8 md:col-span-7 md:order-1 order-2">
-                            <h5 className="text-3xl font-dancing text-white">
-                                Beauty of Discovers
+                            <h5 className="text-2xl font-dancing text-white">
+                                #Destinations
                             </h5>
-                            <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6 mt-5">
-                                Let's Leave The Road, <br /> And Take The
-                                Travosy
+                            <h4 className="font-bold text-white lg:leading-tight leading-tight text-4xl lg:text-6xl mb-6 mt-5">
+                                Your Guide to Extraordinary Places!
                             </h4>
                             <p className="text-white/70 text-xl max-w-xl">
-                                Planning for a trip? We will organize your trip
-                                with the best places and within best budget!
+                                Uncover the World’s Most Breathtaking
+                                Destinations, From Sun-Kissed Shores to
+                                Snow-Capped Peaks, Tailored for Every Traveler’s
+                                Dream.
                             </p>
                         </div>
-
-                        <div className="lg:col-span-4 md:col-span-5 md:text-center md:order-2 order-1">
-                            <Link
-                                to="#!"
-                                onClick={() => setOpen(true)}
-                                className="lightbox lg:h-24 h-20 lg:w-24 w-20 rounded-full shadow-lg dark:shadow-gray-800 inline-flex items-center justify-center bg-white hover:bg-red-500 text-red-500 hover:text-white duration-500 ease-in-out mx-auto"
-                            >
-                                <i className="mdi mdi-play inline-flex items-center justify-center text-3xl"></i>
-                            </Link>
-                        </div>
-                        <ModalVideo
-                            channel="youtube"
-                            youtube={{ mute: 0, autoplay: 0 }}
-                            isOpen={isOpen}
-                            videoId="S_CGed6E610"
-                            onClose={() => setOpen(false)}
-                        />
                     </div>
                 </div>
             </section>
 
-            <div className="container relative -mt-16 z-1">
-                <Form />
-            </div>
+            {/* <div className="container relative -mt-16 z-1"></div> */}
+
+            <section className="relative md:py-24 py-16 overflow-hidden">
+                <DestinationsByRegion />
+            </section>
 
             <section className="relative md:py-24 py-16 overflow-hidden">
                 <TopDestinationOne />
@@ -184,15 +165,77 @@ export default function Index() {
                         </Link>
                     </div>
                 </div>
-
-                <About />
-
-                <Client />
-
-                <Blogs />
             </section>
             <Footer />
             <Switcher />
         </>
     );
 }
+
+const destinationsList = {
+    destinations: {
+        Europe: [
+            { country: 'France', cities: ['Paris'] },
+            { country: 'Italy', cities: ['Rome', 'Venice'] },
+            { country: 'Spain', cities: ['Barcelona', 'Madrid'] },
+            { country: 'United Kingdom', cities: ['London'] },
+            { country: 'Greece', cities: ['Athens', 'Santorini'] },
+            { country: 'Switzerland', cities: ['Zurich', 'Lucerne'] },
+            { country: 'Germany', cities: ['Berlin', 'Munich'] },
+            { country: 'Netherlands', cities: ['Amsterdam'] },
+            { country: 'Portugal', cities: ['Lisbon'] },
+            { country: 'Austria', cities: ['Vienna'] },
+        ],
+        Asia: [
+            { country: 'Japan', cities: ['Tokyo', 'Kyoto'] },
+            { country: 'Thailand', cities: ['Bangkok', 'Phuket'] },
+            { country: 'India', cities: ['Delhi', 'Agra'] },
+            { country: 'China', cities: ['Beijing', 'Shanghai'] },
+            { country: 'Indonesia', cities: ['Bali', 'Jakarta'] },
+            { country: 'Vietnam', cities: ['Ho Chi Minh City', 'Hanoi'] },
+            { country: 'Singapore', cities: ['Singapore City'] },
+            { country: 'Malaysia', cities: ['Kuala Lumpur'] },
+            { country: 'South Korea', cities: ['Seoul'] },
+            { country: 'Nepal', cities: ['Kathmandu'] },
+        ],
+        'North America': [
+            {
+                country: 'USA',
+                cities: ['New York City', 'Los Angeles', 'Las Vegas'],
+            },
+            { country: 'Canada', cities: ['Toronto', 'Vancouver'] },
+            { country: 'Mexico', cities: ['Mexico City', 'Cancun'] },
+            { country: 'Cuba', cities: ['Havana'] },
+            { country: 'Jamaica', cities: ['Montego Bay', 'Kingston'] },
+            { country: 'Dominican Republic', cities: ['Punta Cana'] },
+            { country: 'Bahamas', cities: ['Nassau'] },
+            { country: 'Puerto Rico', cities: ['San Juan'] },
+            { country: 'Costa Rica', cities: ['San José'] },
+            { country: 'Belize', cities: ['Belize City'] },
+        ],
+        'South America': [
+            { country: 'Brazil', cities: ['Rio de Janeiro', 'São Paulo'] },
+            { country: 'Argentina', cities: ['Buenos Aires', 'Mendoza'] },
+            { country: 'Chile', cities: ['Santiago', 'Valparaíso'] },
+            { country: 'Peru', cities: ['Lima', 'Cusco'] },
+            { country: 'Colombia', cities: ['Bogotá', 'Cartagena'] },
+            { country: 'Ecuador', cities: ['Quito', 'Galapagos Islands'] },
+            { country: 'Uruguay', cities: ['Montevideo'] },
+            { country: 'Bolivia', cities: ['La Paz'] },
+            { country: 'Paraguay', cities: ['Asunción'] },
+            { country: 'Venezuela', cities: ['Caracas'] },
+        ],
+        Africa: [
+            { country: 'South Africa', cities: ['Cape Town', 'Johannesburg'] },
+            { country: 'Morocco', cities: ['Marrakech', 'Casablanca'] },
+            { country: 'Egypt', cities: ['Cairo', 'Luxor'] },
+            { country: 'Kenya', cities: ['Nairobi', 'Mombasa'] },
+            { country: 'Tanzania', cities: ['Zanzibar', 'Serengeti'] },
+            { country: 'Nigeria', cities: ['Lagos', 'Abuja'] },
+            { country: 'Ethiopia', cities: ['Addis Ababa'] },
+            { country: 'Ghana', cities: ['Accra'] },
+            { country: 'Namibia', cities: ['Windhoek'] },
+            { country: 'Botswana', cities: ['Gaborone'] },
+        ],
+    },
+};

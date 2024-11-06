@@ -1,0 +1,209 @@
+{
+    "destinations": {
+        "Europe": [
+            {
+                "country": "France",
+                "cities": ["Paris"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Italy",
+                "cities": ["Rome", "Venice"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Spain",
+                "cities": ["Barcelona", "Madrid"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "United Kingdom",
+                "cities": ["London"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Greece",
+                "cities": ["Athens", "Santorini"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Switzerland",
+                "cities": ["Zurich", "Lucerne"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Germany",
+                "cities": ["Berlin", "Munich"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Netherlands",
+                "cities": ["Amsterdam"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }
+        ],
+        "Asia": [
+            {
+                "country": "Japan",
+                "cities": ["Tokyo", "Kyoto"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Thailand",
+                "cities": ["Bangkok", "Phuket"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "India",
+                "cities": ["Delhi", "Agra"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "China",
+                "cities": ["Beijing", "Shanghai"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Indonesia",
+                "cities": ["Bali", "Jakarta"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Vietnam",
+                "cities": ["Ho Chi Minh City", "Hanoi"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Singapore",
+                "cities": ["Singapore City"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Malaysia",
+                "cities": ["Kuala Lumpur"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }
+        ],
+        "North America": [
+            {
+                "country": "USA",
+                "cities": ["New York City", "Los Angeles", "Las Vegas"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Canada",
+                "cities": ["Toronto", "Vancouver"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Mexico",
+                "cities": ["Mexico City", "Cancun"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Cuba",
+                "cities": ["Havana"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Jamaica",
+                "cities": ["Montego Bay", "Kingston"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Dominican Republic",
+                "cities": ["Punta Cana"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Bahamas",
+                "cities": ["Nassau"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Puerto Rico",
+                "cities": ["San Juan"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }
+        ],
+        "South America": [
+            {
+                "country": "Brazil",
+                "cities": ["Rio de Janeiro", "São Paulo"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Argentina",
+                "cities": ["Buenos Aires", "Mendoza"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Chile",
+                "cities": ["Santiago", "Valparaíso"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Peru",
+                "cities": ["Lima", "Cusco"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Colombia",
+                "cities": ["Bogotá", "Cartagena"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Ecuador",
+                "cities": ["Quito", "Galapagos Islands"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Uruguay",
+                "cities": ["Montevideo"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Bolivia",
+                "cities": ["La Paz"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }
+        ],
+        "Africa": [
+            {
+                "country": "South Africa",
+                "cities": ["Cape Town", "Johannesburg"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Morocco",
+                "cities": ["Marrakech", "Casablanca"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Egypt",
+                "cities": ["Cairo", "Luxor"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Kenya",
+                "cities": ["Nairobi", "Mombasa"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Tanzania",
+                "cities": ["Zanzibar", "Serengeti"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Nigeria",
+                "cities": ["Lagos", "Abuja"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                "country": "Ethiopia",
+                "cities": ["Addis Ababa"],
+                "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }
+        ]
+    }
+}
