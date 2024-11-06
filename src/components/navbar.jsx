@@ -1,9 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Link} from "react-router-dom";
 
-import logoDark from "../assets/images/logo-dark.png"
-import logoLight from "../assets/images/logo-light.png"
-import logoWhite from "../assets/images/logo-white.png"
+import logoDark from "../assets/images/logo-light.png"
+// import logoLight from "../assets/images/logo-light1.png"
+import logoLight from '../assets/images/logo-light.png'
+
+import logoWhite from "../assets/images/logo-light.png"
 
 import {FiSearch} from '../assets/icons/vander'
 
@@ -62,8 +64,8 @@ export default function Navbar({navclass, navlight, manuclass}) {
                 {navlight && (
                     <Link className="logo" to="/">
                         <span className="inline-block dark:hidden">
-                            <img src={logoDark} className="h-7 l-dark" alt=""/>
-                            <img src={logoLight} className="h-7 l-light" alt=""/>
+                            <img src={logoDark} className="h-20 w-40 l-dark" alt=""/>
+                            <img src={logoLight} className="h-20 w-40 l-light" alt=""/>
                         </span>
                         <img src={logoWhite} className="hidden dark:inline-block" alt=""/>
                     </Link>
@@ -71,8 +73,8 @@ export default function Navbar({navclass, navlight, manuclass}) {
                 {!navlight && (
                     <Link className="logo" to="/">
                         <div>
-                            <img src={logoDark} className="h-7 inline-block dark:hidden" alt=""/>
-                            <img src={logoWhite} className="h-7 hidden dark:inline-block" alt=""/>
+                            <img src={logoDark} className="h-20 w-40 inline-block dark:hidden" alt=""/>
+                            <img src={logoWhite} className="h-20 w-40 hidden dark:inline-block" alt=""/>
                         </div>
                     </Link>
                 )}
@@ -113,10 +115,10 @@ export default function Navbar({navclass, navlight, manuclass}) {
                     ) : (
 
                         <li className="dropdown inline-block relative pe-1" ref={dropdownRef}>
-                            <button className="dropdown-toggle align-middle inline-flex search-dropdown" type="button"
-                                    onClick={() => setIsOpen(!isOpen)}>
-                                <FiSearch className="size-5"></FiSearch>
-                            </button>
+                            {/*<button className="dropdown-toggle align-middle inline-flex search-dropdown" type="button"*/}
+                            {/*        onClick={() => setIsOpen(!isOpen)}>*/}
+                            {/*    <FiSearch className="size-5"></FiSearch>*/}
+                            {/*</button>*/}
                             {isOpen && (
                                 <div
                                     className="dropdown-menu absolute overflow-hidden end-0 m-0 mt-5 z-10 md:w-52 w-48 rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800">

@@ -35,6 +35,7 @@ import payment3 from '../assets/images/payments/discover.jpg'
 import payment4 from '../assets/images/payments/mastercard.jpg'
 
 import {FiShoppingCart,FiDribbble, FiLinkedin,FiFacebook,FiInstagram,FiTwitter,FiMail,FiClock,FiActivity, FiUsers, FiGlobe,FiDollarSign,FiYoutube,FiHelpCircle,FiBookmark,FiSettings,FiGithub,FiGitlab} from "../assets/icons/vander"
+import {RiTwitterXLine} from "react-icons/ri";
 
 export const topDestination = [
     {
@@ -213,7 +214,7 @@ export const blogData = [
         id:1,
         image:blog1,
         date:'13th Sep 2024',
-        title:'This Spanish city is a feast for the eyes: Travosy',
+        title:'This Spanish city is a feast for the eyes: Flyplaces',
         desc:'This is required when, for example, the final text is not yet available.',
         tag:'Travel'
     },
@@ -229,7 +230,7 @@ export const blogData = [
         id:3,
         image:blog3,
         date:'29th Dec 2024',
-        title:'When you visit the Eternal Rome City: Travosy',
+        title:'When you visit the Eternal Rome City: Flyplaces',
         desc:'This is required when, for example, the final text is not yet available.',
         tag:'Tourist'
     },
@@ -284,14 +285,14 @@ export const blogData = [
 ]
 
 export const footerSocial = [
-    {
-        icon:FiShoppingCart,
-        link:'https://1.envato.market/travosy-react'
-    },
-    {
-        icon:FiDribbble,
-        link:'https://dribbble.com/shreethemes'
-    },
+    // {
+    //     icon:FiShoppingCart,
+    //     link:'https://1.envato.market/travosy-react'
+    // },
+    // {
+    //     icon:FiDribbble,
+    //     link:'https://dribbble.com/shreethemes'
+    // },
     {
         icon:FiLinkedin,
         link:'http://linkedin.com/company/shreethemes'
@@ -305,39 +306,31 @@ export const footerSocial = [
         link:'https://www.instagram.com/shreethemes'
     },
     {
-        icon:FiTwitter,
+        icon: RiTwitterXLine ,
         link:'https://twitter.com/shreethemes'
     },
-    {
-        icon:FiMail,
-        link:'mailto:support@shreethemes.in'
-    },
+    // {
+    //     icon:FiMail,
+    //     link:'mailto:support@shreethemes.in'
+    // },
 ]
 
 export const footerCompany = [
     {
-        name:'About us',
+        name:'Home',
+        link:'/'
+    },
+    {
+        name:'Destination',
+        link:'/destination'
+    },
+    {
+        name:'About',
         link:'/aboutus'
     },
     {
-        name:'Services',
-        link:'/services'
-    },
-    {
-        name:'Team',
-        link:'/team'
-    },
-    {
-        name:'Pricing',
-        link:'/pricing'
-    },
-    {
-        name:'Blog',
-        link:'/blogs'
-    },
-    {
-        name:' Login',
-        link:'/login'
+        name:'Contact Us',
+        link:'/contact'
     },
 ]
 
@@ -353,7 +346,7 @@ export const faqData = [
     },
     {
         id:2,
-        title:'Do I need a designer to use Travosy ?',
+        title:'Do I need a designer to use Flyplaces ?',
         desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
     },
     {

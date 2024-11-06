@@ -16,9 +16,9 @@ export default function Footer(){
                             <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                                 <div className="lg:col-span-3 md:col-span-12">
                                     <Link to="#" className="text-[22px] focus:outline-none">
-                                        <img src={logoLight} alt=""/>
+                                        <img src={logoLight} alt="" className="w-40 h-20" />
                                     </Link>
-                                    <p className="mt-6 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
+                                    <p className="mt-1 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
                                     <ul className="list-none mt-6 space-x-1">
                                         {footerSocial.map((item,index)=>{
                                             let Icon = item.icon
@@ -33,26 +33,26 @@ export default function Footer(){
                                 <div className="lg:col-span-3 md:col-span-4">
                                     <div className="lg:ms-8">
                                         <h5 className="tracking-[1px] text-gray-100 font-semibold">Office</h5>
-                                        <h5 className="tracking-[1px] text-gray-100 mt-6">Travosy Tour & Travels</h5>
+                                        <h5 className="tracking-[1px] text-gray-100 mt-6">Flyplaces Tour & Travels</h5>
 
                                         <div className="flex mt-4">
                                             <FiMapPin className="size-4 text-red-500 me-2 mt-1"></FiMapPin>
                                             <div className="">
-                                                <h6 className="text-gray-300">C/54 Northwest Freeway, <br/> Suite 558, <br/> Houston, USA 485</h6>
+                                                <h6 className="text-gray-300">4544 Sheppard<br/> Ave E Unit 231<br/></h6>
                                             </div>
                                         </div>
 
                                         <div className="flex mt-4">
                                             <FiMail className="size-4 text-red-500 me-2 mt-1"></FiMail>
                                             <div className="">
-                                                <Link to="mailto:contact@example.com" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">contact@example.com</Link>
+                                                <Link to="mailto:info@flyplaces.ca" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">info@flyplaces.ca</Link>
                                             </div>
                                         </div>
                         
                                         <div className="flex mt-4">
                                             <FiPhone className="size-4 text-red-500 me-2 mt-1"></FiPhone>
                                             <div className="">
-                                                <Link to="tel:+152534-468-854" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">+152 534-468-854</Link>
+                                                <Link to="tel:+152534-468-854" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">416-754-3833</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +98,9 @@ export default function Footer(){
                 <div className="container relative text-center">
                     <div className="grid grid-cols-1">
                         <div className="text-center">
-                            <p className="mb-0">© {new Date().getFullYear()} Travosy. Design & Develop with <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                            <p className="mb-0">© {new Date().getFullYear()} Flyplaces.
+                                {/*<i className="mdi mdi-heart text-red-600"></i> */}
+                                <Link to="https://shreethemes.in/" target="_blank" className="text-reset"></Link></p>
                         </div>
                     </div>
                 </div>

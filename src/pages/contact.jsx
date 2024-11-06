@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-
+import emailjs from '@emailjs/browser';
 import travel from '../assets/images/travel-train-station.svg'
 
 import Navbar from "../components/navbar";
@@ -11,13 +11,33 @@ import {FiPhone, FiMail,FiMapPin, FiX} from '../assets/icons/vander'
 
 export default function Contact(){
     let [modal, setModal] = useState(false)
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_yjqd7ld', 'template_85id8vm', form.current, {
+                publicKey: 'C8tJmFXwoPnPN0xwe',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    console.log('Your message has been sent successfully. We will contact you very soon!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={false} manuclass="justify-end"/>
         <div className="container-fluid relative mt-20">
             <div className="grid grid-cols-1">
                 <div className="w-full leading-[0] border-0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style={{border:'0'}} title="travosy" className="w-full h-[500px]"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style={{border:'0'}} title="Flyplaces" className="w-full h-[500px]"></iframe>
                 </div>
             </div>
         </div>
@@ -33,7 +53,7 @@ export default function Contact(){
                             <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800 p-6">
                                 <h3 className="mb-6 text-2xl leading-normal font-semibold">Get in touch !</h3>
 
-                                <form>
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="grid lg:grid-cols-12 grid-cols-1 gap-3">
                                         <div className="lg:col-span-6">
                                             <label htmlFor="name" className="font-semibold">Your Name:</label>
@@ -77,7 +97,7 @@ export default function Contact(){
                             <p className="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
                             
                             <div className="mt-5">
-                                <Link to="tel:+152534-468-854" className="text-red-500 font-medium">+152 534-468-854</Link>
+                                <Link to="tel:+152534-468-854" className="text-red-500 font-medium">416-754-3833</Link>
                             </div>
                         </div>
                     </div>
@@ -94,7 +114,7 @@ export default function Contact(){
                             <p className="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
                             
                             <div className="mt-5">
-                                <Link to="mailto:contact@example.com" className="text-red-500 font-medium">contact@example.com</Link>
+                                <Link to="mailto:info@flyplaces.ca" className="text-red-500 font-medium">info@flyplaces.ca</Link>
                             </div>
                         </div>
                     </div>
@@ -108,7 +128,7 @@ export default function Contact(){
 
                         <div className="content mt-7">
                             <h5 className="h5 text-lg font-semibold">Location</h5>
-                            <p className="text-slate-400 mt-3">C/54 Northwest Freeway, Suite 558, <br/> Houston, USA 485</p>
+                            <p className="text-slate-400 mt-3">4544 Sheppard<br/>Ave E Unit 231</p>
                             
                             <div className="mt-5">
                                 <Link to="#" onClick={()=>setModal(!modal)} className="video-play-icon read-more lightbox text-red-500 font-medium">View on Google map</Link>

@@ -42,6 +42,7 @@ import Blogs from './pages/blog/blogs'
 import BlogStandard from './pages/blog/blog-standard'
 import BlogDetail from './pages/blog/blog-detail'
 import Contact from './pages/contact'
+import Destination from "./pages/destination";
 
 function App() {
     return (
@@ -86,7 +87,7 @@ function App() {
             <Route path="/blog-detail" element={<BlogDetail/>}/>
             <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="*" element={<h1 className={"text-center "}>404 Not Found</h1>}/>
+            <Route path="/destination" element={<Destination/>}/>
         </Routes>
     );
 }

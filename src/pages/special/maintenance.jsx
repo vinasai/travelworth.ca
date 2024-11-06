@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react";
 
-import logo from '../../assets/images/logo-light.png'
+import logo from '../../assets/images/logo-light1.png'
 
 import Switcher from "../../components/switcher";
 import BackToHome from "../../components/back-to-home";
@@ -39,7 +39,7 @@ export default function Maintenance(){
                 <div className="grid grid-cols-1">
                     <img src={logo} className="mx-auto" alt=""/>
                     <h1 className="text-white mb-6 mt-8 md:text-5xl text-3xl font-bold">We Are Back Soon...</h1>
-                    <p className="text-white/70 text-lg max-w-xl mx-auto">Start working with Travosy that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <p className="text-white/70 text-lg max-w-xl mx-auto">Start working with Flyplaces that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
 
                 <div className="grid grid-cols-1 mt-10">

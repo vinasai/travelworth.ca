@@ -30,7 +30,7 @@ export default function Helpcenter(){
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Travosy</Link></li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Flyplaces</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Helpcenter</li>
                 </ul>
@@ -51,7 +51,7 @@ export default function Helpcenter(){
                     <div className="flex">
                         <FiHelpCircle className="fea icon-ex-md text-red-500 me-3 mt-1 size-6"></FiHelpCircle>
                         <div className="flex-1">
-                            <h5 className="mb-2 text-xl font-semibold">How our <span className="text-red-500">Travosy</span> work ?</h5>
+                            <h5 className="mb-2 text-xl font-semibold">How our <span className="text-red-500">Flyplaces</span> work ?</h5>
                             <p className="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export default function Helpcenter(){
                     <div className="flex">
                         <FiHelpCircle className="fea icon-ex-md text-red-500 me-3 mt-1 size-6"></FiHelpCircle>
                         <div className="flex-1">
-                            <h5 className="mb-2 text-xl font-semibold"> Is <span className="text-red-500">Travosy</span> safer to use with my account ?</h5>
+                            <h5 className="mb-2 text-xl font-semibold"> Is <span className="text-red-500">Flyplaces</span> safer to use with my account ?</h5>
                             <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
                         </div>
                     </div>

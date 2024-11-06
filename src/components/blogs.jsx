@@ -28,7 +28,7 @@ export default function Blogs(){
                                 <div className="mt-6">
                                     <div className="flex mb-4">
                                         <span className="flex items-center text-slate-400 text-sm"><FiClock className="size-4 text-slate-900 dark:text-white me-1.5"></FiClock>5 min read</span>
-                                        <span className="text-slate-400 text-sm ms-3">by <Link to="" className="text-slate-900 dark:text-white hover:text-red-500 dark:hover:text-red-500 font-medium">Travosy</Link></span>
+                                        <span className="text-slate-400 text-sm ms-3">by <Link to="" className="text-slate-900 dark:text-white hover:text-red-500 dark:hover:text-red-500 font-medium">Flyplaces</Link></span>
                                     </div>
 
                                     <Link to="/blog-detail" className="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">{item.title}</Link>

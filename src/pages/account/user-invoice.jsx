@@ -6,7 +6,7 @@ import Footer from "../../components/footer";
 import Switcher from "../../components/switcher";
 
 import logoDark from '../../assets/images/logo-dark.png'
-import logoLight from '../../assets/images/logo-light.png'
+import logoLight from '../../assets/images/logo-light1.png'
 
 import {FiLink, FiMapPin, FiMail, FiPhone} from '../../assets/icons/vander'
 
@@ -27,7 +27,7 @@ export default function UserInvoice(){
                                         <img src={logoLight} className="hidden dark:block" alt=""/>
                                         <div className="flex mt-4">
                                             <FiLink className="size-4 me-3 mt-1"></FiLink>
-                                            <Link to="#" target="_blank" className="text-red-500 dark:text-white font-medium">www.travosy.com</Link>
+                                            <Link to="#" target="_blank" className="text-red-500 dark:text-white font-medium">www.Flyplaces.com</Link>
                                         </div>
                                     </div>
 
@@ -42,7 +42,7 @@ export default function UserInvoice(){
                                             
                                             <li className="flex mt-3">
                                                 <FiMail className="size-4 me-3 mt-1"></FiMail>
-                                                <Link to="mailto:contact@example.com" className="text-slate-400">info@Travosy.com</Link>
+                                                <Link to="mailto:info@flyplaces.ca" className="text-slate-400">info@flyplaces.ca</Link>
                                             </li>
                                             
                                             <li className="flex mt-3">

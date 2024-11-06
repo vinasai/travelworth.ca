@@ -1,9 +1,10 @@
 {
-  "name": "travosy",
+  "name": "Flyplaces",
   "version": "1.0.1",
   "description": "React Js Tour & Travels Agency Template",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/forms": "^0.5.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
