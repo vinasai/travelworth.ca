@@ -14,12 +14,6 @@ export default function Contact(){
     let [modal, setModal] = useState(false)
     const form = useRef();
 
-    // let objr = {
-    //     subject: "Meeting Reminder",
-    //     comments: "Don't forget about the team meeting at 10 AM.",
-    //     email: "example@domain.com",
-    //     to_email:"vksthanujaa@gmail.com"
-    // }
 
     function sendEmail(e){
         e.preventDefault();
@@ -76,12 +70,12 @@ export default function Contact(){
                                                    placeholder="Email :" required/>
                                         </div>
 
-                                        <div className="lg:col-span-12">
-                                            <label htmlFor="subject" className="font-semibold">Your Question:</label>
-                                            <input name="subject" id="subject"
-                                                   className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
-                                                   placeholder="Subject :" required/>
-                                        </div>
+                                        {/*<div className="lg:col-span-12">*/}
+                                        {/*    <label htmlFor="subject" className="font-semibold">Your Question:</label>*/}
+                                        {/*    <input name="subject" id="subject"*/}
+                                        {/*           className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"*/}
+                                        {/*           placeholder="Subject :" required/>*/}
+                                        {/*</div>*/}
 
                                         <div className="lg:col-span-12">
                                             <label htmlFor="comments" className="font-semibold">Your Comment:</label>

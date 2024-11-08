@@ -98,7 +98,7 @@ export default function Footer(){
                 <div className="container relative text-center">
                     <div className="grid grid-cols-1">
                         <div className="text-center">
-                            <p className="mb-0">© {new Date().getFullYear()} Flyplaces.
+                            <p className="mb-0">© {new Date().getFullYear()} Flyplaces. All Rights reserved
                                 {/*<i className="mdi mdi-heart text-red-600"></i> */}
                                 <Link to="https://shreethemes.in/" target="_blank" className="text-reset"></Link></p>
                         </div>
