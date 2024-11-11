@@ -44,18 +44,38 @@ export default function DestinationsByRegion() {
 
 	return (
 		<div className="container relative">
-			<div className="grid grid-cols-1 pb-8 text-center">
-				<h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-					Destinations by Region
+			<div className="grid grid-cols-1 pb-6 text-center">
+				<h3 className="mb-3 md:text-5xl text-2xl md:leading-normal leading-normal font-semibold">
+					Explore Destinations by Continents
 				</h3>
 
-				<p className="text-slate-400 max-w-xl mx-auto">
-					Planning for a trip? We will organize your trip with the best places
-					and within best budget!
+				<p className="text-slate-400 max-w-full mx-auto">
+					Ready to embark on an unforgettable journey? Discover the best
+					destinations across the world, carefully categorized by continent.
+					Whether you're seeking adventure, relaxation, or cultural experiences,
+					we’ve got the perfect spots to suit your travel style and budget. Let
+					us help you plan the trip of a lifetime with tailored recommendations
+					from each corner of the globe!
 				</p>
+
+				<section className="relative rounded-lg flex justify-center w-full mt-8">
+					<form className="flex flex-col w-full max-w-[400px] sm:flex-row items-center">
+						<input
+							type="text"
+							placeholder="Search a destination"
+							className="w-full sm:w-3/4 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003C74]"
+						/>
+						<button
+							// type="submit"
+							className="mt-2 sm:mt-0 sm:ml-2 w-full sm:w-auto px-4 py-2 bg-[#003C74] text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+						>
+							Search
+						</button>
+					</form>
+				</section>
 			</div>
 
-			<div className="grid grid-cols-1 relative mt-6">
+			<div className="grid grid-cols-1 relative mt-2">
 				<div className="tiny-five-item">
 					{Object.keys(destinationData.destinations).map((continent, index) => {
 						return (
@@ -102,21 +122,23 @@ export const DestinationSliderCard = ({ image, place, hotels }) => {
 					alt=""
 				/>
 				<div className="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-				<div className="absolute p-4 bottom-0 start-0 w-full">
-					<Link
-						to=""
-						className="text-lg font-medium text-white hover:text-red-500 duration-500 ease-in-out"
-					>
-						{place}
-					</Link>
-					<p className="text-white/70 group-hover:text-white text-sm duration-500">
-						{hotels}
-					</p>
+				<div className="absolute p-4 top-0 bottom-0 start-0 h-full w-full flex flex-col justify-between">
+					<div>
+						<Link
+							to=""
+							className="text-lg font-semibold text-indigo-900 hover:text-red-500 duration-500 ease-in-out"
+						>
+							{place}
+						</Link>
+						<p className="text-indigo-900/80 group-hover:text-white text-sm duration-500">
+							{hotels}
+						</p>
+					</div>
 
-					<div className="flex justify-end">
+					<div className="flex justify-end w-full mt-4">
 						<a
 							href="/destinations/paris"
-							className="bg-white font-medium px-2 py-1 rounded text-indigo-900 hover:bg-indigo-900 hover:text-white text-sm duration-500"
+							className="bg-white font-medium px-2 py-1 w-full text-center rounded text-indigo-900 hover:bg-indigo-900 hover:text-white text-sm duration-500"
 						>
 							View Destination
 						</a>

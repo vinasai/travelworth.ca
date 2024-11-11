@@ -47,17 +47,15 @@ export default function ExploreDestinations() {
 
 			{/* <div className="container relative -mt-16 z-1"></div> */}
 
-			<section className="relative md:py-24 py-16 overflow-hidden">
+			<section className="relative md:pt-10 md:pb-16 pt-16 pb-16 overflow-hidden">
 				<DestinationsByRegion />
 			</section>
 
-			<section className="relative md:py-24 py-16 overflow-hidden">
-				<TopDestinationOne />
-
+			<section className="relative md:py-24 pt-4 pb-16 overflow-hidden">
 				<div className="container relative md:mt-24 mt-16">
 					<div className="grid grid-cols-1 pb-8 text-center">
 						<h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-							Tours Packages
+							Our Best Selling Tours Packages
 						</h3>
 
 						<p className="text-slate-400 max-w-xl mx-auto">
