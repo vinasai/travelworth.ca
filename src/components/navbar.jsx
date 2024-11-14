@@ -224,17 +224,6 @@ export default function Navbar({ navclass, navlight, manuclass }) {
             {/*            Five</Link></li>*/}
             {/*    </ul>*/}
             {/*</li>*/}
-            <li
-              className={`${
-                manu === "/destinations" || manu === "/destinations:city"
-                  ? "active"
-                  : ""
-              }`}
-            >
-              <Link to="/destinations" className="sub-menu-item">
-                Destinations
-              </Link>
-            </li>
 
             {/* <li className={`has-submenu parent-parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(manu) ? 'active' : '' }`}><Link to="" onClick={()=>setSubManu(subManu === '/listing-item' ? '' : '/listing-item' )}> Listing </Link><span className="menu-arrow"></span> */}
             {/* <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(subManu) ? 'open' : '' }`}> */}
@@ -373,9 +362,15 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                 Home
               </Link>
             </li>
-            <li className={`${manu === "/destination" ? "active" : ""}`}>
-              <Link to="/destination" className="sub-menu-item">
-                Destination
+            <li
+              className={`${
+                manu === "/destinations" || manu === "/destinations:city"
+                  ? "active"
+                  : ""
+              }`}
+            >
+              <Link to="/destinations" className="sub-menu-item">
+                Destinations
               </Link>
             </li>
             <li className={`${manu === "/aboutus" ? "active" : ""}`}>
