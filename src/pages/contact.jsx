@@ -9,32 +9,34 @@ import Switcher from "../components/switcher";
 
 import {FiPhone, FiMail,FiMapPin, FiX} from '../assets/icons/vander'
 import {data} from "autoprefixer";
+import {toast} from "react-toastify";
 
 export default function Contact(){
     let [modal, setModal] = useState(false)
     const form = useRef();
-
+    const [message, setMessage] = useState("");
 
     function sendEmail(e){
         e.preventDefault();
         const formData = {
-            name: form.current.name.value,
-            email: form.current.email.value,
-            subject: form.current.subject.value,
-            comments: form.current.comments.value,
+            name: e.target.elements.name.value,
+            email: e.target.elements.email.value,
+            comments: e.target.elements.comments.value,
             to_email: "vinasaionline@gmail.com"
         };
-        emailjs.send('service_yjqd7ld', 'template_85id8vm', formData,{publicKey: 'KgIi7Ml2if6NxTllR'})
+        emailjs.send('service_6u0rxmv', 'template_blgrgcl', formData,{publicKey: 'nILc-0nZOkqQX9jQB'})
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
+                toast.success("Successfully Send Email");
             }, function(error) {
                 console.log('FAILED...', error);
+                toast.error(error.response.data.message)
             });
     }
 
     return(
         <>
-        <Navbar navclass="defaultscroll is-sticky" navlight={false} manuclass="justify-end"/>
+        <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="justify-end"/>
         <div className="container-fluid relative mt-20">
             <div className="grid grid-cols-1">
                 <div className="w-full leading-[0] border-0">

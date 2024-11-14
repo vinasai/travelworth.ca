@@ -22,6 +22,7 @@ import UserProfile from './pages/account/user-profile'
 import UserPayment from './pages/account/user-payment'
 import UserInvoice from './pages/account/user-invoice'
 import UserSocial from './pages/account/user-social'
+import {ToastContainer} from "react-toastify";
 import UserNotification from './pages/account/user-notification'
 import UserSetting from './pages/account/user-setting'
 import Helpcenter from './pages/helpcenter/helpcenter'
@@ -43,9 +44,11 @@ import BlogStandard from './pages/blog/blog-standard'
 import BlogDetail from './pages/blog/blog-detail'
 import Contact from './pages/contact'
 import Destination from "./pages/destination";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (
+        <>
         <Routes>
             <Route path="/" element={<Index/>}/>
             <Route path="/index-two" element={<IndexTwo/>}/>
@@ -89,6 +92,8 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/destination" element={<Destination/>}/>
         </Routes>
+        <ToastContainer/>
+        </>
     );
 }
 
