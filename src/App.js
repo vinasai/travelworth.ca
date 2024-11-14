@@ -1,54 +1,54 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
-import './assets/css/tailwind.css'
-import './assets/css/materialdesignicons.min.css'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import "./assets/css/tailwind.css";
+import "./assets/css/materialdesignicons.min.css";
+import "./App.css";
 
-import Index from './pages/index/index'
-import IndexTwo from './pages/index/index-two'
-import IndexThree from './pages/index/index-three'
-import IndexFour from './pages/index/index-four'
-import IndexFive from './pages/index/index-five'
-import Grid from './pages/listing/tour-grid/grid'
-import GridLeftSidebar from './pages/listing/tour-grid/grid-left-sidebar'
-import GridRightSidebar from './pages/listing/tour-grid/grid-right-sidebar'
-import List from './pages/listing/tour-list/list'
-import ListLeftSidebar from './pages/listing/tour-list/list-left-sidebar'
-import ListRightSidebar from './pages/listing/tour-list/list-right-sidebar'
-import TourDetailOne from './pages/listing/tour-detail/tour-detail-one'
-import TourDetailTwo from './pages/listing/tour-detail/tour-detail-two'
-import Aboutus from './pages/aboutus'
-import UserProfile from './pages/account/user-profile'
-import UserPayment from './pages/account/user-payment'
-import UserInvoice from './pages/account/user-invoice'
-import UserSocial from './pages/account/user-social'
+import Index from "./pages/index/index";
+import IndexTwo from "./pages/index/index-two";
+import IndexThree from "./pages/index/index-three";
+import IndexFour from "./pages/index/index-four";
+import IndexFive from "./pages/index/index-five";
+import Grid from "./pages/listing/tour-grid/grid";
+import GridLeftSidebar from "./pages/listing/tour-grid/grid-left-sidebar";
+import GridRightSidebar from "./pages/listing/tour-grid/grid-right-sidebar";
+import List from "./pages/listing/tour-list/list";
+import ListLeftSidebar from "./pages/listing/tour-list/list-left-sidebar";
+import ListRightSidebar from "./pages/listing/tour-list/list-right-sidebar";
+import TourDetailOne from "./pages/listing/tour-detail/tour-detail-one";
+import TourDetailTwo from "./pages/listing/tour-detail/tour-detail-two";
+import Aboutus from "./pages/aboutus";
+import UserProfile from "./pages/account/user-profile";
+import UserPayment from "./pages/account/user-payment";
+import UserInvoice from "./pages/account/user-invoice";
+import UserSocial from "./pages/account/user-social";
 import {ToastContainer} from "react-toastify";
-import UserNotification from './pages/account/user-notification'
-import UserSetting from './pages/account/user-setting'
-import Helpcenter from './pages/helpcenter/helpcenter'
-import HelpcenterFaq from './pages/helpcenter/helpcenter-faqs'
-import HelpcenterGuides from './pages/helpcenter/helpcenter-guides'
-import HelpcenterSupport from './pages/helpcenter/helpcenter-support'
-import Login from './pages/auth/login'
-import Signup from './pages/auth/signup'
-import SignupSuccess from './pages/auth/signup-success'
-import ForgotPassword from './pages/auth/forgot-password'
-import LockScreen from './pages/auth/lock-screen'
-import Terms from './pages/utility/terms'
-import Privacy from './pages/utility/privacy'
-import Comingsoon from './pages/special/comingsoon'
-import Maintenance from './pages/special/maintenance'
-import Error from './pages/special/404'
-import Blogs from './pages/blog/blogs'
-import BlogStandard from './pages/blog/blog-standard'
-import BlogDetail from './pages/blog/blog-detail'
-import Contact from './pages/contact'
-import Destination from "./pages/destination";
+import UserNotification from "./pages/account/user-notification";
+import UserSetting from "./pages/account/user-setting";
+import Helpcenter from "./pages/helpcenter/helpcenter";
+import HelpcenterFaq from "./pages/helpcenter/helpcenter-faqs";
+import HelpcenterGuides from "./pages/helpcenter/helpcenter-guides";
+import HelpcenterSupport from "./pages/helpcenter/helpcenter-support";
+import Login from "./pages/auth/login";
+import Signup from "./pages/auth/signup";
+import SignupSuccess from "./pages/auth/signup-success";
+import ForgotPassword from "./pages/auth/forgot-password";
+import LockScreen from "./pages/auth/lock-screen";
+import Terms from "./pages/utility/terms";
+import Privacy from "./pages/utility/privacy";
+import Comingsoon from "./pages/special/comingsoon";
+import Maintenance from "./pages/special/maintenance";
+import Error from "./pages/special/404";
+import Blogs from "./pages/blog/blogs";
+import BlogStandard from "./pages/blog/blog-standard";
+import BlogDetail from "./pages/blog/blog-detail";
+import Contact from "./pages/contact";
+import ExploreDestinations from "./pages/destinations/destinations";
+import CityDestinations from "./pages/destinations/destination-city";
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (
-        <>
         <Routes>
             <Route path="/" element={<Index/>}/>
             <Route path="/index-two" element={<IndexTwo/>}/>
@@ -90,10 +90,9 @@ function App() {
             <Route path="/blog-detail" element={<BlogDetail/>}/>
             <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/destination" element={<Destination/>}/>
+            <Route path="/destinations" element={<ExploreDestinations />} />
+			<Route path="/destinations/:city" element={<CityDestinations />} />
         </Routes>
-        <ToastContainer/>
-        </>
     );
 }
 
