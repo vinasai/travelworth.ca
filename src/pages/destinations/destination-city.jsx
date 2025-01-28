@@ -43,7 +43,7 @@ const ExploreDestinations = () => {
 				</div>
 			</section>
 
-			<CityDestinationContent />
+			
 
 			<Footer />
 			<Switcher />

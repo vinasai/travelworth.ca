@@ -214,7 +214,7 @@ export const blogData = [
         id:1,
         image:blog1,
         date:'13th Sep 2024',
-        title:'This Spanish city is a feast for the eyes: Flyplaces',
+        title:'This Spanish city is a feast for the eyes: Travelworth',
         desc:'This is required when, for example, the final text is not yet available.',
         tag:'Travel'
     },
@@ -230,7 +230,7 @@ export const blogData = [
         id:3,
         image:blog3,
         date:'29th Dec 2024',
-        title:'When you visit the Eternal Rome City: Flyplaces',
+        title:'When you visit the Eternal Rome City: Travelworth',
         desc:'This is required when, for example, the final text is not yet available.',
         tag:'Tourist'
     },
@@ -299,11 +299,11 @@ export const footerSocial = [
     },
     {
         icon:FiFacebook,
-        link:'https://www.facebook.com/shreethemes'
+        link:''
     },
     {
         icon:FiInstagram,
-        link:'https://www.instagram.com/shreethemes'
+        link:''
     },
     {
         icon: RiTwitterXLine ,

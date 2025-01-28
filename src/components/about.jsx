@@ -41,9 +41,9 @@ export default function About(){
 
                 <div className="md:col-span-7">
                     <div className="lg:ms-8">
-                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">World Best Travel <br/> Agency: Flyplaces</h3>
+                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">World Best Travel <br/> Agency:Travelworth</h3>
 
-                        <p className="text-slate-400 max-w-xl mb-6">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Flyplaces network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
+                        <p className="text-slate-400 max-w-xl mb-6 text-lg">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Travelworth network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
 
                         <Link to="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
                     </div>

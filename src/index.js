@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalProvider';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <GlobalProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </GlobalProvider>
     
 );
 

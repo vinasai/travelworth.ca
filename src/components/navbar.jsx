@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import logoDark from "../assets/images/logo-dark.png";
-import logoLight from "../assets/images/logo-light.png";
-import logoWhite from "../assets/images/logo-white.png";
+import logoDark from "../assets/images/Tavel-Worth File.png";
+import logoLight from "../assets/images/Tavel-Worth File.png";
+import logoWhite from "../assets/images/Tavel-Worth File.png";
 import userImg from "../assets/images/client/16.jpg";
 
 import {
@@ -69,14 +69,15 @@ export default function Navbar({ navclass, navlight, manuclass }) {
         {navlight && (
           <Link className="logo" to="/">
             <span className="inline-block dark:hidden">
-              <img src={logoLight} className="h-20 w-40 l-dark" alt="" />
-              <img src={logoLight} className="h-20 w-40 l-light" alt="" />
+            <img src={logoLight} className="h-20 w-40 l-dark" alt="" /> 
+
+               <img src={logoLight} className="h-20 w-40 l-light" alt="" />  
             </span>
-            <img
+           <img
               src={logoLight}
-              className="h-20 w-40 l-light hidden dark:inline-block"
+              className="h-20 w-40 l-light hidden dark:inline-block "
               alt=""
-            />
+            />  
           </Link>
         )}
         {!navlight && (
@@ -201,7 +202,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
           id="navigation"
           style={{ display: isToggle === true ? "block" : "none" }}
         >
-          <ul className={`navigation-menu ${manuclass}`}>
+          <ul className={`navigation-menu ${manuclass} text-lg`}>
             {/*<li className={`has-submenu parent-menu-item ${['/', '/index-two', '/index-three', '/index-four', '/index-five', '/index-item'].includes(manu) ? 'active' : ''}`}>*/}
             {/*    <Link to=""*/}
             {/*          onClick={() => setSubManu(setManu === '/index-item' ? '' : '/index-item')}>Hero</Link><span*/}
@@ -358,7 +359,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                             </ul> */}
             {/* </li> */}
             <li className={`${manu === "/" ? "active" : ""}`}>
-              <Link to="/" className="sub-menu-item">
+              <Link to="/" className="sub-menu-item  text-lg">
                 Home
               </Link>
             </li>
@@ -369,20 +370,21 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                   : ""
               }`}
             >
-              <Link to="/destinations" className="sub-menu-item">
+              <Link to="/destinations" className="sub-menu-item text-lg">
                 Destinations
               </Link>
             </li>
             <li className={`${manu === "/aboutus" ? "active" : ""}`}>
-              <Link to="/aboutus" className="sub-menu-item">
+              <Link to="/aboutus" className="sub-menu-item text-lg">
                 About
               </Link>
             </li>
             <li className={`${manu === "/contact" ? "active" : ""}`}>
-              <Link to="/contact" className="sub-menu-item">
+              <Link to="/contact" className="sub-menu-item  text-lg">
                 Contact Us
               </Link>
             </li>
+            
           </ul>
         </div>
       </div>

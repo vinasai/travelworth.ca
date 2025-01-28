@@ -38,7 +38,7 @@ export default function GridRightSidebar(){
                     
                     <div className="lg:col-span-8 md:col-span-7">
                         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-                            {packages.map((item,index)=>{
+                        {packages.slice(0, 6).map((item, index) =>{
                                 return(
                                     <div className="group rounded-md shadow dark:shadow-gray-700" key={index}>
                                         <div className="relative overflow-hidden rounded-t-md shadow dark:shadow-gray-700 mx-3 mt-3">

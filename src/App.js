@@ -3,9 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 import "./App.css";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import Index from "./pages/index/index";
-import IndexTwo from "./pages/index/index-two";
+import Admin from "./pages/index/admin";
 import IndexThree from "./pages/index/index-three";
 import IndexFour from "./pages/index/index-four";
 import IndexFive from "./pages/index/index-five";
@@ -46,12 +47,28 @@ import Contact from "./pages/contact";
 import ExploreDestinations from "./pages/destinations/destinations";
 import CityDestinations from "./pages/destinations/destination-city";
 import 'react-toastify/dist/ReactToastify.css';
+import AddPackageForm from "./components/AddPackageForm";
+import CustomerFeedback from"./pages/index/CustomerFeedback";
+
+import ManageDestinations from './pages/ManageDestinations';
+import ManagePlaces from './pages/ManagePlaces';
+import AddDestinationForm from'./components/AddDestinationForm';
+import ManageFood from'./pages/ManageFood';
+import ManageCulture from'./pages/ManagaCulture';
+import MustVisitPlace from'./pages/ManageMustVisitPlaces';
+import Do from'./pages/ManageDolist';
+import CityDestinationContent from "./components/destinations/city-destination";
+import Placedetails from'./components/Placedetails';
+
+
 
 function App() {
+
+    
     return (
         <Routes>
             <Route path="/" element={<Index/>}/>
-            <Route path="/index-two" element={<IndexTwo/>}/>
+            
             <Route path="/index-three" element={<IndexThree/>}/>
             <Route path="/index-four" element={<IndexFour/>}/>
             <Route path="/index-five" element={<IndexFive/>}/>
@@ -91,7 +108,74 @@ function App() {
             <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/destinations" element={<ExploreDestinations />} />
-			<Route path="/destinations/:city" element={<CityDestinations />} />
+		    <Route path="/Addpackages" element={<AddPackageForm/>}  />
+            <Route path="/customerfeedback" element={<CustomerFeedback/>}  />
+
+            <Route path="/adddestinationform" element={<AddDestinationForm />} />
+            <Route path="/city-destination" element={<CityDestinationContent/>} />
+            <Route path="/places/:placeId" element={<Placedetails/>} />
+
+            <Route
+                        path="/admin"
+                        element={
+                            <ProtectedRoute>
+                            <Admin/>
+                            </ProtectedRoute>
+                        }
+                />
+                <Route
+                        path="/managedestinations"
+                        element={
+                            <ProtectedRoute>
+                            <ManageDestinations />
+                            </ProtectedRoute>
+                        }
+                />
+                <Route
+                        path="/manageplaces"
+                        element={
+                            <ProtectedRoute>
+                            <ManagePlaces />
+                            </ProtectedRoute>
+                        }
+                />
+                <Route
+                        path="/Food"
+                        element={
+                            <ProtectedRoute>
+                            < ManageFood/>
+                            </ProtectedRoute>
+                        }
+                />
+                <Route
+                        path="/manageculture"
+                        element={
+                            <ProtectedRoute>
+                            <ManageCulture />
+                            </ProtectedRoute>
+                        }
+                />
+
+                <Route
+                        path="/managevisit"
+                        element={
+                            <ProtectedRoute>
+                            <MustVisitPlace />
+                            </ProtectedRoute>
+                        }
+                />
+
+                <Route
+                        path="/dolist"
+                        element={
+                            <ProtectedRoute>
+                        <Do />
+                            </ProtectedRoute>
+                        }
+                />
+
+    
+
         </Routes>
     );
 }
