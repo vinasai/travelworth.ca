@@ -56,6 +56,7 @@ const Sidebar = () => {
     }
   };
   return (
+    //[7/2/2025] [Shivan] [Added a new list item(Customer Details) for adding of calling customer details]
     <div className="w-64 h-auto bg-gradient-to-b from-gray-800 to-gray-900 text-white flex flex-col shadow-xl">
       <h2 className="text-3xl p-6 font-bold border-b border-gray-700 bg-gray-800">
         <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
@@ -64,6 +65,29 @@ const Sidebar = () => {
       </h2>
 
       <ul className="flex flex-col h-screen space-y-1 py-4">
+      <li className="px-4">
+          <Link
+            to="/customerdetails"
+            className="flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-gray-700 hover:translate-x-1"
+          >
+            <svg
+              className="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 14c4.418 0 8 3.582 8 8H4c0-4.418 3.582-8 8-8z
+                  M12 14a5 5 0 100-10 5 5 0 000 10z"
+              />
+            </svg>
+            Customer Details
+          </Link>
+        </li>
+
         <li className="px-4">
           <Link
             to="/customerfeedback"
