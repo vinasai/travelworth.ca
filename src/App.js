@@ -118,6 +118,14 @@ function App() {
             <Route path="/places/:placeId" element={<Placedetails/>} />
 
             <Route
+                        path="/customerdetails"
+                        element={
+                            <ProtectedRoute>
+                            <CustomerDetails/>
+                            </ProtectedRoute>
+                        }
+                />
+            <Route
                         path="/admin"
                         element={
                             <ProtectedRoute>
