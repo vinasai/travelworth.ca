@@ -49,6 +49,7 @@ import CityDestinations from "./pages/destinations/destination-city";
 import 'react-toastify/dist/ReactToastify.css';
 import AddPackageForm from "./components/AddPackageForm";
 import CustomerFeedback from"./pages/index/CustomerFeedback";
+import CustomerDetails from "./pages/index/CustomerDetails";
 
 import ManageDestinations from './pages/ManageDestinations';
 import ManagePlaces from './pages/ManagePlaces';
@@ -110,11 +111,20 @@ function App() {
             <Route path="/destinations" element={<ExploreDestinations />} />
 		    <Route path="/Addpackages" element={<AddPackageForm/>}  />
             <Route path="/customerfeedback" element={<CustomerFeedback/>}  />
+            <Route path="/customerdetails" element={<CustomerDetails/>}  />
 
             <Route path="/adddestinationform" element={<AddDestinationForm />} />
             <Route path="/city-destination" element={<CityDestinationContent/>} />
             <Route path="/places/:placeId" element={<Placedetails/>} />
 
+            <Route
+                        path="/customerdetails"
+                        element={
+                            <ProtectedRoute>
+                            <CustomerDetails/>
+                            </ProtectedRoute>
+                        }
+                />
             <Route
                         path="/admin"
                         element={
