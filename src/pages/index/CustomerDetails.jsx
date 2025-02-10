@@ -1,3 +1,4 @@
+// [10/2/2025] [Shivan] [Created this file for adding and searching customers]
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "../../components/Sidebar";
