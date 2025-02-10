@@ -11,7 +11,7 @@ const AddCustomerDetails = ({ onAddCustomer }) => {
     memberCount: "",
   });
 
-  const [showForm, setShowForm] = useState(false); // ✅ Move state here
+  const [showForm, setShowForm] = useState(false);
 
   const handleChange = (e) => {
     setCustomer({ ...customer, [e.target.name]: e.target.value });
@@ -25,12 +25,12 @@ const AddCustomerDetails = ({ onAddCustomer }) => {
     }
     onAddCustomer(customer);
     setCustomer({ name: "", email: "", phone: "", from: "", to: "", memberCount: "" });
-    setShowForm(false); // ✅ Hide form after submitting
+    setShowForm(false); 
   };
 
   return (
     <div className="mt-4">
-      {/* ✅ Add Customer & Cancel Buttons Side by Side */}
+      
       <div className="flex items-center gap-4">
         <button
           onClick={() => setShowForm(!showForm)}
@@ -40,7 +40,6 @@ const AddCustomerDetails = ({ onAddCustomer }) => {
         </button>
       </div>
 
-      {/* ✅ Show Form Only When `showForm` is True */}
       {showForm && (
         <form onSubmit={handleSubmit} className="mt-2 mb-2 flex gap-2 flex-wrap">
           <input

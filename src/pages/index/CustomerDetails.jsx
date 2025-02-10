@@ -5,8 +5,8 @@ import Sidebar from "../../components/Sidebar";
 import AddCustomerDetails from "../../components/AddCustomerDetails";
 
 export default function AdminDashboard() {
-  const [customers, setCustomers] = useState([]); // Stores all customers
-  const [filteredCustomers, setFilteredCustomers] = useState([]); // Stores searched results
+  const [customers, setCustomers] = useState([]); 
+  const [filteredCustomers, setFilteredCustomers] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
@@ -18,9 +18,9 @@ export default function AdminDashboard() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/contacts`); // Fetch all customers
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/contacts`);
       setCustomers(response.data);
-      setFilteredCustomers(response.data); // Set initial filtered customers
+      setFilteredCustomers(response.data); 
     } catch (error) {
       console.error("Error fetching customers:", error);
     }
@@ -30,7 +30,7 @@ export default function AdminDashboard() {
   const handleSearch = (query) => {
     setSearchQuery(query);
     if (!query) {
-      setFilteredCustomers(customers); // Reset to all customers
+      setFilteredCustomers(customers);
       return;
     }
 
@@ -76,7 +76,7 @@ export default function AdminDashboard() {
       <div className="flex-1 p-6">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Customer Details</h2>
         
-        {/* ✅ Add Customer Form Component*/}
+        {/* Add Customer Form Component*/}
         <AddCustomerDetails onAddCustomer={addCustomer} />
 
         {/* Search Input */}
