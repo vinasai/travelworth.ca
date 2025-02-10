@@ -165,7 +165,7 @@ export default function AdminDashboard() {
         </table>
         {/* Confirmation Modal */}
         {confirmationModal.isOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg shadow-xl">
               <h3 className="text-xl font-bold mb-4">
                 {confirmationModal.status === 'approved' 
