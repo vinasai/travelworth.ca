@@ -1,3 +1,4 @@
+// [10/2/2025] [Shivan] [Created this file for adding customers component in admin panel]
 import React, { useState } from "react";
 
 const AddCustomerDetails = ({ onAddCustomer }) => {
