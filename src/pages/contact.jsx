@@ -26,6 +26,7 @@ export default function Contact(){
             from: e.target.elements.from.value,
             to: e.target.elements.to.value,
             memberCount: parseInt(e.target.elements.memberCount.value),
+            status: 'pending',
         };
     
         fetch('https://travelworth.ca/api/contacts', {

@@ -28,10 +28,11 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // CORS Configuration
 app.use(cors({
   origin: ['http://localhost:3000', 'https://travelworth.ca', 'http://localhost:5000'],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: 'Content-Type,Authorization',
   credentials: true
 }));
+
 
 // Session Configuration
 app.use(session({
