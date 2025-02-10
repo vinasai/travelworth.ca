@@ -95,6 +95,7 @@ export default function AdminDashboard() {
               <th className="px-6 py-3">Name</th>
               <th className="px-6 py-3">Email</th>
               <th className="px-6 py-3">Phone</th>
+              <th className="px-6 py-3">Status</th>
               <th className="px-6 py-3">From</th>
               <th className="px-6 py-3">To</th>
               <th className="px-6 py-3">Member Count</th>
@@ -108,6 +109,7 @@ export default function AdminDashboard() {
                   <td className="px-6 py-4">{contact.name}</td>
                   <td className="px-6 py-4">{contact.email}</td>
                   <td className="px-6 py-4">{contact.phone}</td>
+                  <td className="px-6 py-4">{contact.status}</td>
                   <td className="px-6 py-4">{contact.from}</td>
                   <td className="px-6 py-4">{contact.to}</td>
                   <td className="px-6 py-4">{contact.memberCount}</td>
