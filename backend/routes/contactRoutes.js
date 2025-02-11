@@ -1,3 +1,5 @@
+// [10/2/2025] [Oshen]  [Added the update contact status endpoint] 
+// [11/2/2025] [Shivan] [Added the update a contact by ID endpoint]
 const express = require('express');
 const Contact = require('../models/Contact');
 
@@ -21,6 +23,22 @@ router.get('/', async (req, res) => {
     try {
         const contacts = await Contact.find();
         res.status(200).json(contacts);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Delete a contact by ID
+router.delete('/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedContact = await Contact.findByIdAndDelete(id);
+
+        if (!deletedContact) {
+            return res.status(404).json({ error: 'Contact not found' });
+        }
+
+        res.status(200).json({ message: 'Contact deleted successfully' });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -54,5 +72,20 @@ router.patch('/:id/status', async (req, res) => {
     }
 });
 
+// Update a contact by ID
+router.put('/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updatedContact = await Contact.findByIdAndUpdate(id, req.body, { new: true });
+
+        if (!updatedContact) {
+            return res.status(404).json({ error: 'Contact not found' });
+        }
+
+        res.status(200).json(updatedContact);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 module.exports = router;
