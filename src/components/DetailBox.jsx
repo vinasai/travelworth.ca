@@ -5,9 +5,9 @@ const DetailBox = ({ customer, onClose }) => {
     if (!customer) return null;
     return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="absolute inset-0 backdrop-blur-xl opacity-35" onClick={onClose}></div>  
+      <div className="absolute inset-0 backdrop-blur-md opacity-30" onClick={onClose}></div>  
       <div className="relative bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md">
-        <h2 className="text-xl font-semibold mb-4">Customer Details</h2>
+        <h2 className="text-xl font-semibold mb-4">{customer.name}s Trip Details</h2>
 
         <div className="mb-2">
           <strong>From:</strong> {customer.from}
