@@ -5,6 +5,7 @@ import axios from "axios";
 import { Trash2, Pencil, Check, X } from "lucide-react";
 import Sidebar from "../../components/Sidebar";
 import AddCustomerDetails from "../../components/AddCustomerDetails";
+import DetailBox from "../../components/DetailBox";
 
 export default function AdminDashboard() {
   const [customers, setCustomers] = useState([]); 
@@ -12,6 +13,7 @@ export default function AdminDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [editRowId, setEditRowId] = useState(null);
   const [editData, setEditData] = useState({});
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
 
   const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -155,6 +157,7 @@ export default function AdminDashboard() {
                       customer.name
                     )}
                   </td>
+
                   <td className="px-6 py-4">
                     {editRowId === customer._id ? (
                       <input
@@ -167,6 +170,7 @@ export default function AdminDashboard() {
                       customer.email
                     )}
                   </td>
+
                   <td className="px-6 py-4">
                     {editRowId === customer._id ? (
                       <input
@@ -179,6 +183,7 @@ export default function AdminDashboard() {
                       customer.phone
                     )}
                   </td>
+
                   <td className="px-6 py-4">
                     {editRowId === customer._id ? (
                       <input
@@ -191,15 +196,20 @@ export default function AdminDashboard() {
                       customer.status
                     )}
                   </td>
+
                   <td className="px-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="#666666">
-                      <circle cx="8" cy="12" r="3" fill="#666666" />
-                      <rect x="5" y="15" width="6" height="4" rx="2" ry="2" fill="#666666" />
-                      <line x1="13" y1="10" x2="17" y2="10" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
-                      <line x1="13" y1="12" x2="17" y2="12" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
-                      <line x1="13" y1="14" x2="17" y2="14" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
+                    <button onClick={() => setSelectedCustomer(customer)} className="text-gray-700 hover:text-gray-900" title="View Details">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="#666666">
+                        <circle cx="8" cy="12" r="3" fill="#666666" />
+                        <rect x="5" y="15" width="6" height="4" rx="2" ry="2" fill="#666666" />
+                        <line x1="13" y1="10" x2="17" y2="10" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
+                        <line x1="13" y1="12" x2="17" y2="12" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
+                        <line x1="13" y1="14" x2="17" y2="14" stroke="#666666" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    </button>
+                    {selectedCustomer && <DetailBox customer={selectedCustomer} onClose={() => setSelectedCustomer(null)} /> }
                   </td>
+                  
                   <td className="px-6 py-4 flex space-x-4">
                     {editRowId === customer._id ? (
                       <>
