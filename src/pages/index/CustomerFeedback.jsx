@@ -97,6 +97,10 @@ export default function AdminDashboard() {
     setConfirmationModal({ isOpen: false, contactId: null, status: null });
   };
 
+  const getActionText = (status) => {
+    return status === 'approved' ? 'approve' : 'reject';
+  };
+
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
@@ -173,7 +177,7 @@ export default function AdminDashboard() {
                   : 'Reject Request'}
               </h3>
               <p className="mb-6">
-                Are you sure you want to {confirmationModal.status} this request?
+              Are you sure you want to {getActionText(confirmationModal.status)} this request?
               </p>
               <div className="flex justify-end space-x-4">
                 <button
