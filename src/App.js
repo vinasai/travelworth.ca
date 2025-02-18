@@ -1,3 +1,4 @@
+// [18/02/2025] [Shivan] [added the chatbot iframe]
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./assets/css/tailwind.css";
@@ -67,6 +68,7 @@ function App() {
 
     
     return (
+        <div>
         <Routes>
             <Route path="/" element={<Index/>}/>
             
@@ -187,6 +189,19 @@ function App() {
     
 
         </Routes>
+        <iframe
+                src="https://chatbot.travelworth.ca"
+                width="500"
+                height="600"
+                style={{
+                position: "fixed",
+                bottom: "20px",
+                right: "20px",
+                border: "none",
+                borderRadius: "10px",
+                }}
+            ></iframe>
+        </div>
     );
 }
 
