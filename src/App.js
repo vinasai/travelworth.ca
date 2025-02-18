@@ -1,4 +1,4 @@
-// [18/02/2025] [Shivan] [added the chatbot iframe]
+//[18/02/2025] [Oshen] [added the chatbot only to user pages and not to admin pages]
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./assets/css/tailwind.css";
@@ -61,147 +61,131 @@ import MustVisitPlace from'./pages/ManageMustVisitPlaces';
 import Do from'./pages/ManageDolist';
 import CityDestinationContent from "./components/destinations/city-destination";
 import Placedetails from'./components/Placedetails';
+import TravelChatbot from "./components/TravelChatbot";
 
 
 
 function App() {
-
-    
     return (
-        <div>
-        <Routes>
-            <Route path="/" element={<Index/>}/>
-            
-            <Route path="/index-three" element={<IndexThree/>}/>
-            <Route path="/index-four" element={<IndexFour/>}/>
-            <Route path="/index-five" element={<IndexFive/>}/>
-            <Route path="/grid" element={<Grid/>}/>
-            <Route path="/grid-left-sidebar" element={<GridLeftSidebar/>}/>
-            <Route path="/grid-right-sidebar" element={<GridRightSidebar/>}/>
-            <Route path="/list" element={<List/>}/>
-            <Route path="/list-left-sidebar" element={<ListLeftSidebar/>}/>
-            <Route path="/list-right-sidebar" element={<ListRightSidebar/>}/>
-            <Route path="/tour-detail-one" element={<TourDetailOne/>}/>
-            <Route path="/tour-detail-one/:id" element={<TourDetailOne/>}/>
-            <Route path="/tour-detail-two" element={<TourDetailTwo/>}/>
-            <Route path="/aboutus" element={<Aboutus/>}/>
-            <Route path="/user-profile" element={<UserProfile/>}/>
-            <Route path="/user-payment" element={<UserPayment/>}/>
-            <Route path="/user-invoice" element={<UserInvoice/>}/>
-            <Route path="/user-social" element={<UserSocial/>}/>
-            <Route path="/user-notification" element={<UserNotification/>}/>
-            <Route path="/user-setting" element={<UserSetting/>}/>
-            <Route path="/helpcenter" element={<Helpcenter/>}/>
-            <Route path="/helpcenter-faqs" element={<HelpcenterFaq/>}/>
-            <Route path="/helpcenter-guides" element={<HelpcenterGuides/>}/>
-            <Route path="/helpcenter-support" element={<HelpcenterSupport/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/signup" element={<Signup/>}/>
-            <Route path="/signup-success" element={<SignupSuccess/>}/>
-            <Route path="/forgot-password" element={<ForgotPassword/>}/>
-            <Route path="/lock-screen" element={<LockScreen/>}/>
-            <Route path="/terms" element={<Terms/>}/>
-            <Route path="/privacy" element={<Privacy/>}/>
-            <Route path="/comingsoon" element={<Comingsoon/>}/>
-            <Route path="/maintenance" element={<Maintenance/>}/>
-            <Route path="/404" element={<Error/>}/>
-            <Route path="/blogs" element={<Blogs/>}/>
-            <Route path="/blog-standard" element={<BlogStandard/>}/>
-            <Route path="/blog-detail" element={<BlogDetail/>}/>
-            <Route path="/blog-detail/:id" element={<BlogDetail/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/destinations" element={<ExploreDestinations />} />
-		    <Route path="/Addpackages" element={<AddPackageForm/>}  />
-            <Route path="/customerfeedback" element={<CustomerFeedback/>}  />
-            <Route path="/customerdetails" element={<CustomerDetails/>}  />
+        <>
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/index-three" element={<IndexThree />} />
+                <Route path="/index-four" element={<IndexFour />} />
+                <Route path="/index-five" element={<IndexFive />} />
+                <Route path="/grid" element={<Grid />} />
+                <Route path="/grid-left-sidebar" element={<GridLeftSidebar />} />
+                <Route path="/grid-right-sidebar" element={<GridRightSidebar />} />
+                <Route path="/list" element={<List />} />
+                <Route path="/list-left-sidebar" element={<ListLeftSidebar />} />
+                <Route path="/list-right-sidebar" element={<ListRightSidebar />} />
+                <Route path="/tour-detail-one/:id" element={<TourDetailOne />} />
+                <Route path="/tour-detail-two" element={<TourDetailTwo />} />
+                <Route path="/aboutus" element={<Aboutus />} />
+                <Route path="/user-profile" element={<UserProfile />} />
+                <Route path="/user-payment" element={<UserPayment />} />
+                <Route path="/user-invoice" element={<UserInvoice />} />
+                <Route path="/user-social" element={<UserSocial />} />
+                <Route path="/user-notification" element={<UserNotification />} />
+                <Route path="/user-setting" element={<UserSetting />} />
+                <Route path="/helpcenter" element={<Helpcenter />} />
+                <Route path="/helpcenter-faqs" element={<HelpcenterFaq />} />
+                <Route path="/helpcenter-guides" element={<HelpcenterGuides />} />
+                <Route path="/helpcenter-support" element={<HelpcenterSupport />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/signup-success" element={<SignupSuccess />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/lock-screen" element={<LockScreen />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/comingsoon" element={<Comingsoon />} />
+                <Route path="/maintenance" element={<Maintenance />} />
+                <Route path="/404" element={<Error />} />
+                <Route path="/blogs" element={<Blogs />} />
+                <Route path="/blog-standard" element={<BlogStandard />} />
+                <Route path="/blog-detail/:id" element={<BlogDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/destinations" element={<ExploreDestinations />} />
+                <Route path="/Addpackages" element={<AddPackageForm />} />
+                <Route path="/customerfeedback" element={<CustomerFeedback />} />
+                <Route path="/customerdetails" element={<CustomerDetails />} />
+                <Route path="/adddestinationform" element={<AddDestinationForm />} />
+                <Route path="/city-destination" element={<CityDestinationContent />} />
+                <Route path="/places/:placeId" element={<Placedetails />} />
 
-            <Route path="/adddestinationform" element={<AddDestinationForm />} />
-            <Route path="/city-destination" element={<CityDestinationContent/>} />
-            <Route path="/places/:placeId" element={<Placedetails/>} />
-
-            <Route
-                        path="/customerdetails"
-                        element={
-                            <ProtectedRoute>
-                            <CustomerDetails/>
-                            </ProtectedRoute>
-                        }
-                />
-            <Route
-                        path="/admin"
-                        element={
-                            <ProtectedRoute>
-                            <Admin/>
-                            </ProtectedRoute>
-                        }
+                {/* Protected Routes (Admin Panel) */}
+                <Route
+                    path="/customerdetails"
+                    element={
+                        <ProtectedRoute>
+                            <CustomerDetails />
+                        </ProtectedRoute>
+                    }
                 />
                 <Route
-                        path="/managedestinations"
-                        element={
-                            <ProtectedRoute>
+                    path="/admin"
+                    element={
+                        <ProtectedRoute>
+                            <Admin />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/managedestinations"
+                    element={
+                        <ProtectedRoute>
                             <ManageDestinations />
-                            </ProtectedRoute>
-                        }
+                        </ProtectedRoute>
+                    }
                 />
                 <Route
-                        path="/manageplaces"
-                        element={
-                            <ProtectedRoute>
+                    path="/manageplaces"
+                    element={
+                        <ProtectedRoute>
                             <ManagePlaces />
-                            </ProtectedRoute>
-                        }
+                        </ProtectedRoute>
+                    }
                 />
                 <Route
-                        path="/Food"
-                        element={
-                            <ProtectedRoute>
-                            < ManageFood/>
-                            </ProtectedRoute>
-                        }
+                    path="/Food"
+                    element={
+                        <ProtectedRoute>
+                            <ManageFood />
+                        </ProtectedRoute>
+                    }
                 />
                 <Route
-                        path="/manageculture"
-                        element={
-                            <ProtectedRoute>
+                    path="/manageculture"
+                    element={
+                        <ProtectedRoute>
                             <ManageCulture />
-                            </ProtectedRoute>
-                        }
+                        </ProtectedRoute>
+                    }
                 />
-
                 <Route
-                        path="/managevisit"
-                        element={
-                            <ProtectedRoute>
+                    path="/managevisit"
+                    element={
+                        <ProtectedRoute>
                             <MustVisitPlace />
-                            </ProtectedRoute>
-                        }
+                        </ProtectedRoute>
+                    }
                 />
-
                 <Route
-                        path="/dolist"
-                        element={
-                            <ProtectedRoute>
-                        <Do />
-                            </ProtectedRoute>
-                        }
+                    path="/dolist"
+                    element={
+                        <ProtectedRoute>
+                            <Do />
+                        </ProtectedRoute>
+                    }
                 />
+            </Routes>
 
-    
-
-        </Routes>
-        <iframe
-                src="https://chatbot.travelworth.ca"
-                width="500"
-                height="600"
-                style={{
-                position: "fixed",
-                bottom: "20px",
-                right: "20px",
-                border: "none",
-                borderRadius: "10px",
-                }}
-            ></iframe>
-        </div>
+            {/* Show TravelChatbot only for users, not in admin-related pages */}
+            {!window.location.pathname.includes("/admin") &&
+                !window.location.pathname.includes("/manage") &&
+                <TravelChatbot />}
+        </>
     );
 }
 
