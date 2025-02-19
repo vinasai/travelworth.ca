@@ -1,4 +1,5 @@
 //[18/02/2025] [Oshen] [added the chatbot only to user pages and not to admin pages]
+//[19/02/2025] [Shivan] [removed customerfeedback and customerdetails from user]
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./assets/css/tailwind.css";
@@ -108,8 +109,6 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/destinations" element={<ExploreDestinations />} />
                 <Route path="/Addpackages" element={<AddPackageForm />} />
-                <Route path="/customerfeedback" element={<CustomerFeedback />} />
-                <Route path="/customerdetails" element={<CustomerDetails />} />
                 <Route path="/adddestinationform" element={<AddDestinationForm />} />
                 <Route path="/city-destination" element={<CityDestinationContent />} />
                 <Route path="/places/:placeId" element={<Placedetails />} />
