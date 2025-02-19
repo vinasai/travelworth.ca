@@ -53,7 +53,7 @@ export default function AdminDashboard() {
   const addCustomer = async (newCustomer) => {
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/api/contacts`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/contacts`,
         newCustomer,
         { headers: { "Content-Type": "application/json" } }
       );
@@ -80,12 +80,13 @@ export default function AdminDashboard() {
     // Update customer
     const updateContact = async (id, updatedData) => {
       try {
-        const response = await axios.put(`http://localhost:5000/api/contacts/${id}`, updatedData, {
+        const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/contacts/${id}`, updatedData, {
           headers: { "Content-Type": "application/json" },
         });
         const updatedCustomers = customers.map((customer) =>
           customer._id === id ? response.data : customer
         );
+        setCustomers(updatedCustomers)
         fetchCustomers(); // Refetch updated data
         setEditRowId(null);
       } catch (error) {
@@ -95,7 +96,7 @@ export default function AdminDashboard() {
 
     const handleEditClick = (customer) => {
       setEditRowId(customer._id);
-      setEditData(customer);
+      setEditData({...customer});
     };
 
     const handleCancelEdit = () => {
