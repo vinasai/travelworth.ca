@@ -1,7 +1,7 @@
 //[18/02/2025] [Oshen] [added the chatbot only to user pages and not to admin pages]
 //[19/02/2025] [Shivan] [removed customerfeedback and customerdetails from user]
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes , useLocation} from "react-router-dom";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 import "./App.css";
@@ -67,6 +67,20 @@ import TravelChatbot from "./components/TravelChatbot";
 
 
 function App() {
+    const location = useLocation();
+        // List of protected routes
+    const protectedRoutes = [
+            "/customerdetails",
+            "/customerfeedback",
+            "/admin",
+            "/managedestinations",
+            "/manageplaces",
+            "/food",
+            "/manageculture",
+            "/managevisit",
+            "/dolist"
+        ];
+
     return (
         <>
             <Routes>
@@ -123,6 +137,14 @@ function App() {
                     }
                 />
                 <Route
+                    path="/customerfeedback"
+                    element={
+                        <ProtectedRoute>
+                            <CustomerFeedback />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
                     path="/admin"
                     element={
                         <ProtectedRoute>
@@ -147,7 +169,7 @@ function App() {
                     }
                 />
                 <Route
-                    path="/Food"
+                    path="/food"
                     element={
                         <ProtectedRoute>
                             <ManageFood />
@@ -181,9 +203,7 @@ function App() {
             </Routes>
 
             {/* Show TravelChatbot only for users, not in admin-related pages */}
-            {!window.location.pathname.includes("/admin") &&
-                !window.location.pathname.includes("/manage") &&
-                <TravelChatbot />}
+            {!protectedRoutes.includes(location.pathname) && <TravelChatbot />}
         </>
     );
 }
