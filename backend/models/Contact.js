@@ -1,3 +1,4 @@
+//[19/02/2025] [Shivan] [updated the status as required]
 const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema({
@@ -10,7 +11,8 @@ const contactSchema = new mongoose.Schema({
     status: { 
         type: String, 
         enum: ['pending', 'approved', 'rejected'], 
-        default: 'pending' 
+        default: 'pending',
+        required: true
     }
 }, { timestamps: true }); // Automatically adds 'createdAt' and 'updatedAt' fields
 
