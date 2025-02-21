@@ -57,7 +57,7 @@ import ManageDestinations from './pages/ManageDestinations';
 import ManagePlaces from './pages/ManagePlaces';
 import AddDestinationForm from'./components/AddDestinationForm';
 import ManageFood from'./pages/ManageFood';
-import ManageCulture from'./pages/ManagaCulture';
+import ManageCulture from'./pages/ManageCulture';
 import MustVisitPlace from'./pages/ManageMustVisitPlaces';
 import Do from'./pages/ManageDolist';
 import CityDestinationContent from "./components/destinations/city-destination";
